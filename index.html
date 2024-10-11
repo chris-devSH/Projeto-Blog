@@ -9,6 +9,8 @@
         label{
             display: block;
         }
+
+       
     </style>
 </head>
 <body>
@@ -20,18 +22,56 @@
 
             <div id="cor2">
                 <h1>Login</h1>
-                <p>Seja bem vindo ao seu organizador pessoal!</p>
-                <p>Por favor, insira seu login e senha:</p>
-                <label for="idemail">Login:</label>
-                <input type="email" name="email" id="idemail" size="10">
+                
+                <p id="paragrafologin">Por favor, insira seu usuário e senha: </p>
+                <label for="idemail">Usuário:</label>
+                <input type="email" name="email" id="idemail" size="20" class="estilizando" placeholder="Insira seu usuário" >
                 <label for="idsenha"> Senha: </label>
-                <input type="password" name="password" id="idsenha" size="10">
+                <input type="password" name="password" id="idsenha" size="20" class="estilizando"  placeholder="Insira sua senha" required>
+                <input type="button" value="Entrar" id="menor">
                 
                 
             </div>
             
         </section>
     </main>
+
+    <script>
+
+       
+
+var clique = document.getElementsByClassName('estilizando');
+
+// Usando um loop para aplicar eventos em cada elemento da classe 'estilizando'
+for (var i = 0; i < clique.length; i++) {
+    clique[i].addEventListener('mousedown', clicar);
+    clique[i].addEventListener('mouseup', soltar); 
+    clique[i].addEventListener('mouseenter', entrando);
+    clique[i].addEventListener('mouseout', saindo); // corrigido de 'mouseenter' para 'mouseout'
+}
+
+function entrando(event) {
+    var elemento = event.target; // Obtém o elemento específico que disparou o evento
+    elemento.classList.add('intout'); // Adiciona a classe 'intout' apenas a esse elemento
+}
+
+function saindo(event) {
+    var elemento = event.target; // Obtém o elemento específico que disparou o evento
+    elemento.classList.remove('intout'); // Remove a classe 'intout' do elemento
+}
+
+function clicar(event) {
+    var elemento = event.target; // Obtém o elemento que foi clicado
+    elemento.style.background = ''; // Altera o fundo do elemento clicado
+}
+        
+        
+function soltar(event) {
+    var elemento = event.target; // Obtém o elemento que foi clicado
+    elemento.style.background = ''; // Altera o fundo do elemento clicado
+}
+       
+    </script>
 </body>
 </html>
 <!--
