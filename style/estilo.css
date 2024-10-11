@@ -43,8 +43,8 @@ main{
 
 section{
     background-color: white;
-    width: 50vw;
-    height: 75vh;
+    width: 70vw;
+    height: 70vh;
     position: relative;
     top: 50%;
     left: 50%;
@@ -89,7 +89,7 @@ h1{
     background-image: url('../Imagens/Designer.jpeg'); /*Faltou o '..'*/
     background-repeat: no-repeat;
     background-size: cover;
-    
+    background-attachment: fixed;
     background-position: center center;
     border-radius: 10px;
    
