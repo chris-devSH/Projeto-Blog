@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/estilo.css">
+    <link rel="stylesheet" href="style/query.css">:
     <title>Página de login</title>
     <style>
-        label{
-            display: block;
-        }
+       
 
        
     </style>
@@ -28,8 +27,8 @@
                     <label for="idemail">Usuário:</label>
                     <input type="email" name="email" id="idemail" size="20" class="estilizando" placeholder="Insira seu usuário" >
                     <label for="idsenha"> Senha: </label>
-                    <input type="password" name="password" id="idsenha" size="20" class="estilizando"  placeholder="Insira sua senha" required>
-                    <input type="button" value="Entrar" id="menor">
+                    <input type="password" required name="password" id="idsenha" size="20" class="estilizando"  placeholder="Insira sua senha" >
+                    <input type="button" value="Entrar" id="menor"  onclick="verificar()">
                 </form>
                 
                 
@@ -73,6 +72,13 @@ function soltar(event) {
     elemento.style.background = ''; // Altera o fundo do elemento clicado
 }
        
+function verificar(){
+
+
+    if(clique[i].length == 0){
+        window.alert('0')
+    }
+}
     </script>
 </body>
 </html>

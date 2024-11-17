@@ -28,8 +28,8 @@ gradiente em
 
 html, body{
     background-color: #ABD7AE;
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
+    height: 96vh;
     font-family: "Catamaran", sans-serif;
 
 }
@@ -42,7 +42,7 @@ main{
 
 
 section{
-    background-color: white;
+    
     width: 70vw;
     min-width: 330px;
     height: 70vh;
@@ -54,6 +54,8 @@ section{
     
     transform: translate(-50%, -50%);
     border-radius: 10px;
+
+    transition: width .5s, height .5s;
     
     
     
@@ -117,12 +119,16 @@ h1{
     height: 25px;
     text-indent: 0px;
     font-weight: 700;
-    border: 3px #0449079c solid;
+    border: 2px #0449079c solid;
     color: #022904;
     background-color: rgba(255, 255, 255, 0.911);
 }
 
-
+#menor:hover{
+    border-color: #07640b;
+    border-width: 3px;
+    border-style: solid;
+}
 
 
 p#paragrafologin{
@@ -130,8 +136,7 @@ p#paragrafologin{
 
     font-size: 1.0em;
     margin: 25px 10px;
-     
-    font-optical-sizing: auto;
+
     font-weight: 500;
     font-style: normal;
 }
@@ -139,7 +144,10 @@ p#paragrafologin{
 label{
     margin: 0px 10px ;
     font-weight: 500;
+    display: block;
 }
+
+
 
 input{
     
@@ -147,8 +155,11 @@ input{
     border-radius: 5px;
     text-indent: 5px;
     height: 20px;
-    background-color: rgba(255, 255, 255, 0.911);;
-    border-width: 3px;
+    background-color: rgba(255, 255, 255, 0.911);
+    border-width: 2px;
+
+    transition: width .5s, height .5s;
+    transition-timing-function: ease; /* da uma suavizada na animação*/
 }
 
 
